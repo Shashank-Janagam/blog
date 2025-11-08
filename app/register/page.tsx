@@ -9,7 +9,7 @@ export default function RegisterPage(){
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
 
-    async function handleRegister(e:any){
+    async function handleRegister(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
 
         const res=await fetch("/api/register",{
